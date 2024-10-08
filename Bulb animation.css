@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.head{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 5rem;
+    text-decoration: underline 5px;
+    
+}
+.bulb{
+    position: absolute;
+    appearance: none;  /* removes the default styling */
+    height: 250px;
+    width: 250px;
+    background-color: #d0d5f4;
+    transform: translate(-50%, -50%);
+    top:calc(50% - 50px); /* 50% down of the container / page and move up 50 px (to top) */
+    left: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.bulb::before{
+    position: absolute;
+    content: '';
+    height: 100px;
+    width: 25px;
+    background-color: #b4b9f1;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.bulb:after{
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 30px;
+    border: 25px solid #b4b9f1;
+    border-radius: 50%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+}
+label{
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    background-color: #08475e;
+    border-radius: 0 0 20px 20px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: calc(50% + 120px); /* 50 % from top + then 120 px  */
+    background: linear-gradient(#08475e 50%, #05303d 50%);/* 50% = top half first color & bottom half second color */    
+}
+label::before{
+    position: absolute;
+    content: '';
+    height: 50px;
+    width: 50px;
+    background-color: #05303d;
+    bottom: -20px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 50%;   
+}
+label::after{
+     position: absolute;
+     content: '';
+     height: 500px;
+     width: 250px;
+     background-color: #ffffff4d;
+     bottom: -50px;
+     left: 55px;
+}
+
+
+  /*  ------------ Bulb On --------------------------- */
+
+
+input:checked{
+    background-color:#ffd845 ;
+}
+input:checked::before{
+    background-color: #ff8e00;
+}
+input:checked::after{
+    border: 25px solid #ff8e00;
+}
